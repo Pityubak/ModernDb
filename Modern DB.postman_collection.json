@@ -1,0 +1,2323 @@
+{
+	"info": {
+		"_postman_id": "1c33d26d-a96b-4c20-bd03-313402ea9ff8",
+		"name": "Modern DB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19397034"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/clients",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:37:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"clientId\": \"64733ce636c5341b895f3660\",\n        \"active\": true,\n        \"name\": \"TestClient\",\n        \"contactInfo\": {\n            \"address\": \"Some address\",\n            \"phoneNumber\": \"20/1232-23-213\",\n            \"emailAddress\": \"ingo@dome.hu\"\n        },\n        \"tasks\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get client",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/client/64733207fed4ff28f20f9598",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"client",
+										"64733207fed4ff28f20f9598"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:37:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/client/64733ce636c5341b895f3660",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"client",
+										"64733ce636c5341b895f3660"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:38:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clientId\": \"64733ce636c5341b895f3660\",\n    \"active\": true,\n    \"name\": \"TestClient\",\n    \"contactInfo\": {\n        \"address\": \"Some address\",\n        \"phoneNumber\": \"20/1232-23-213\",\n        \"emailAddress\": \"ingo@dome.hu\"\n    },\n    \"tasks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TestClient\",\r\n    \"contactInfo\": {\r\n        \"address\": \"Some address\",\r\n        \"phoneNumber\": \"20/1232-23-213\",\r\n        \"emailAddress\": \"ingo@dome.hu\"\r\n    },\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/client",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"TestClient\",\r\n    \"contactInfo\": {\r\n        \"address\": \"Some address\",\r\n        \"phoneNumber\": \"20/1232-23-213\",\r\n        \"emailAddress\": \"ingo@dome.hu\"\r\n    },\r\n    \"active\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/client",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"client"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:37:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clientId\": \"64733ce636c5341b895f3660\",\n    \"active\": true,\n    \"name\": \"TestClient\",\n    \"contactInfo\": {\n        \"address\": \"Some address\",\n        \"phoneNumber\": \"20/1232-23-213\",\n        \"emailAddress\": \"ingo@dome.hu\"\n    },\n    \"tasks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TestClient disabled\",\r\n    \"contactInfo\": {\r\n        \"address\": \"Some address\",\r\n        \"phoneNumber\": \"20/1232-23-213\",\r\n        \"emailAddress\": \"ingo@dome.hu\"\r\n    },\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/client/64733ce636c5341b895f3660",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"client",
+								"64733ce636c5341b895f3660"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"TestClient disabled\",\r\n    \"contactInfo\": {\r\n        \"address\": \"Some address\",\r\n        \"phoneNumber\": \"20/1232-23-213\",\r\n        \"emailAddress\": \"ingo@dome.hu\"\r\n    },\r\n    \"active\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/client/64733207fed4ff28f20f9598",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"client",
+										"64733207fed4ff28f20f9598"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:39:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"TestClient disabled\",\r\n    \"contactInfo\": {\r\n        \"address\": \"Some address\",\r\n        \"phoneNumber\": \"20/1232-23-213\",\r\n        \"emailAddress\": \"ingo@dome.hu\"\r\n    },\r\n    \"active\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/client/64733ce636c5341b895f3660",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"client",
+										"64733ce636c5341b895f3660"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:40:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clientId\": \"64733ce636c5341b895f3660\",\n    \"active\": false,\n    \"name\": \"TestClient disabled\",\n    \"contactInfo\": {\n        \"address\": \"Some address\",\n        \"phoneNumber\": \"20/1232-23-213\",\n        \"emailAddress\": \"ingo@dome.hu\"\n    },\n    \"tasks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/client/64733207fed4ff28f20f9598",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"client",
+								"64733207fed4ff28f20f9598"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "204 No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/client/64733207fed4ff28f20f9598",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"client",
+										"64733207fed4ff28f20f9598"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:40:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Add project(s)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/client/64733826cf84aa067fe33278/project",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"client",
+								"64733826cf84aa067fe33278",
+								"project"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 Empty response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/staffs",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"staffs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:42:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/staffs",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"staffs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:44:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"staffId\": \"64733e8336c5341b895f3662\",\n        \"displayName\": \"Józska bácsi\",\n        \"userName\": \"Joshi Bharat\",\n        \"password\": \"secret\",\n        \"emailAddress\": \"some@some.hu\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"displayName\":\"Józska bácsi\",\r\n    \"userName\":\"Joshi Bharat\",\r\n    \"emailAddress\":\"some@some.hu\",\r\n    \"password\":\"secret\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/staff",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"staff"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"displayName\":\"Józska bácsi\",\r\n    \"userName\":\"Joshi Bharat\",\r\n    \"emailAddress\":\"some@some.hu\",\r\n    \"password\":\"secret\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/staff",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"staff"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:44:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"staffId\": \"64733e8336c5341b895f3662\",\n    \"displayName\": \"Józska bácsi\",\n    \"userName\": \"Joshi Bharat\",\n    \"password\": \"secret\",\n    \"emailAddress\": \"some@some.hu\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get staff",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/staff/64733207fed4ff28f20f9598",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"staff",
+										"64733207fed4ff28f20f9598"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:44:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/staff/64733e8336c5341b895f3662",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"staff",
+										"64733e8336c5341b895f3662"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:45:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"staffId\": \"64733e8336c5341b895f3662\",\n    \"displayName\": \"Józska bácsi\",\n    \"userName\": \"Joshi Bharat\",\n    \"password\": \"secret\",\n    \"emailAddress\": \"some@some.hu\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/staff/64733ce636c5341b895f3660",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"staff",
+								"64733ce636c5341b895f3660"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"displayName\":\"Vendel\",\r\n    \"userName\":\"A kislány\",\r\n    \"emailAddress\":\"some@some.hu\",\r\n    \"password\":\"secret\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/staff/64733ce636c5341b895f3660",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"staff",
+										"64733ce636c5341b895f3660"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:46:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/staff/64733ce636c5341b895f3660",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"staff",
+								"64733ce636c5341b895f3660"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "204 No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/staff/64733ce636c5341b895f3660",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"staff",
+										"64733ce636c5341b895f3660"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 11:47:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 Empty response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/projects",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"projects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:06:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/projects",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"projects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:17:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"projectId\": \"647345ef102a57160fc7e4f0\",\n        \"title\": \"Modern DB\",\n        \"description\": \"Some informative description\",\n        \"deadline\": \"2022.10.3\",\n        \"startTime\": \"2023.2.2\",\n        \"status\": \"DONE\",\n        \"tasks\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get project",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/project/647337a9845da86d2e624760",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"project",
+										"647337a9845da86d2e624760"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:07:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/project/647345ef102a57160fc7e4f0",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"project",
+										"647345ef102a57160fc7e4f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:18:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"projectId\": \"647345ef102a57160fc7e4f0\",\n    \"title\": \"Modern DB\",\n    \"description\": \"Some informative description\",\n    \"deadline\": \"2022.10.3\",\n    \"startTime\": \"2023.2.2\",\n    \"status\": \"DONE\",\n    \"tasks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deadline\":\"2022.10.10\",\r\n    \"startTime\":\"2023.02.02\",\r\n    \"description\":\"Some informative description\",\r\n    \"status\":\"DONE\",\r\n    \"title\":\"Modern DB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/project",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/project",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"project"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:09:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-05-28T12:09:09.198+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/project\"\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"deadline\":\"2022.10.10\",\r\n    \"startTime\":\"2023.02.02\",\r\n    \"description\":\"Some informative description\",\r\n    \"status\":\"DONE\",\r\n    \"title\":\"Modern DB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/project",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"project"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:15:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"projectId\": \"647345ef102a57160fc7e4f0\",\n    \"title\": \"Modern DB\",\n    \"description\": \"Some informative description\",\n    \"deadline\": \"2022.10.3\",\n    \"startTime\": \"2023.2.2\",\n    \"status\": \"DONE\",\n    \"tasks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deadline\":\"2022.10.10\",\r\n    \"startTime\":\"2023.02.02\",\r\n    \"description\":\"Some informative description\",\r\n    \"status\":\"STUCK\",\r\n    \"title\":\"Modern DB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/project/64733207fed4ff28f20f9598",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"project",
+								"64733207fed4ff28f20f9598"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/project/64733207fed4ff28f20f9598",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"project",
+										"64733207fed4ff28f20f9598"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:16:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"deadline\":\"2022.10.10\",\r\n    \"startTime\":\"2023.02.02\",\r\n    \"description\":\"Some informative description\",\r\n    \"status\":\"STUCK\",\r\n    \"title\":\"Modern DB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/project/647345ef102a57160fc7e4f0",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"project",
+										"647345ef102a57160fc7e4f0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:18:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"projectId\": \"647345ef102a57160fc7e4f0\",\n    \"title\": \"Modern DB\",\n    \"description\": \"Some informative description\",\n    \"deadline\": \"2022.10.3\",\n    \"startTime\": \"2023.2.2\",\n    \"status\": \"STUCK\",\n    \"tasks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/project/64733207fed4ff28f20f9598",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"project",
+								"64733207fed4ff28f20f9598"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "204 No content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/project/647345ef102a57160fc7e4f0",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"project",
+										"647345ef102a57160fc7e4f0"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:19:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Add task(s)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/project/64733207fed4ff28f20f9598/task",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"project",
+								"64733207fed4ff28f20f9598",
+								"task"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 Empty response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/tasks",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:49:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/tasks",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:53:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"taskId\": \"64734ec27cecec6bc1fe159b\",\n        \"title\": \"Some title\",\n        \"status\": \"PENDING\",\n        \"priority\": \"HIGH\",\n        \"staffs\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get task",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/task/64733826cf84aa067fe33278",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"task",
+										"64733826cf84aa067fe33278"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:50:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/task/64734ec27cecec6bc1fe159b",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"task",
+										"64734ec27cecec6bc1fe159b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:54:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"taskId\": \"64734ec27cecec6bc1fe159b\",\n    \"title\": \"Some title\",\n    \"status\": \"PENDING\",\n    \"priority\": \"HIGH\",\n    \"staffs\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/document",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"document"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/document",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:51:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-05-28T12:51:52.411+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/document\"\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"priority\":\"HIGH\",\r\n    \"status\":\"PENDING\",\r\n    \"title\":\"Some title\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/task",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"task"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:53:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"taskId\": \"64734ec27cecec6bc1fe159b\",\n    \"title\": \"Some title\",\n    \"status\": \"PENDING\",\n    \"priority\": \"HIGH\",\n    \"staffs\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/task/647337a9845da86d2e624760",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"task",
+								"647337a9845da86d2e624760"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/task/647337a9845da86d2e624760",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"task",
+										"647337a9845da86d2e624760"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Allow",
+									"value": "DELETE, GET, PUT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:55:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-05-28T12:55:00.590+00:00\",\n    \"status\": 405,\n    \"error\": \"Method Not Allowed\",\n    \"path\": \"/task/647337a9845da86d2e624760\"\n}"
+						},
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"priority\":\"LOW\",\r\n    \"status\":\"PENDING\",\r\n    \"title\":\"Some title\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/task/647337a9845da86d2e624760",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"task",
+										"647337a9845da86d2e624760"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:56:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/task/647337a9845da86d2e624760",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"task",
+								"647337a9845da86d2e624760"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add staff(s)",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Document",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 Empty response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/documents",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"documents"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:33:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/documents",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"documents"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:38:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"documentationId\": \"64734ad4d0c94714fc9b2f5c\",\n        \"date\": \"2023.3.2\",\n        \"approved\": \"APPROVED\",\n        \"title\": \"Modern DB doc\",\n        \"content\": \"Huge content\",\n        \"task\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get document",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/document/64733207fed4ff28f20f9598",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document",
+										"64733207fed4ff28f20f9598"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:33:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/document/64734ad4d0c94714fc9b2f5c",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document",
+										"64734ad4d0c94714fc9b2f5c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:38:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"documentationId\": \"64734ad4d0c94714fc9b2f5c\",\n    \"date\": \"2023.3.2\",\n    \"approved\": \"APPROVED\",\n    \"title\": \"Modern DB doc\",\n    \"content\": \"Huge content\",\n    \"task\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/document",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"document"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/document",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:34:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-05-28T12:34:29.748+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/document\"\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"approved\":\"APPROVED\",\r\n    \"content\":\"Huge content\",\r\n    \"date\":\"2023.03.11\",\r\n    \"title\":\"Modern DB doc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/document",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:36:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"documentationId\": \"64734ad4d0c94714fc9b2f5c\",\n    \"date\": \"2023.3.2\",\n    \"approved\": \"APPROVED\",\n    \"title\": \"Modern DB doc\",\n    \"content\": \"Huge content\",\n    \"task\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/document/647337a9845da86d2e624760",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"document",
+								"647337a9845da86d2e624760"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8800/document/647337a9845da86d2e624760",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document",
+										"647337a9845da86d2e624760"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:37:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-05-28T12:37:23.557+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/document/647337a9845da86d2e624760\"\n}"
+						},
+						{
+							"name": "404 Not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"approved\":\"APPROVED\",\r\n    \"content\":\"Huge content\",\r\n    \"date\":\"2023.03.11\",\r\n    \"title\":\"Modern DB doc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/document/647337a9845da86d2e624760",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document",
+										"647337a9845da86d2e624760"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:37:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"approved\":\"REJECTED\",\r\n    \"content\":\"Huge content\",\r\n    \"date\":\"2023.03.11\",\r\n    \"title\":\"Modern DB doc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8800/document/64734ad4d0c94714fc9b2f5c",
+									"host": [
+										"localhost"
+									],
+									"port": "8800",
+									"path": [
+										"document",
+										"64734ad4d0c94714fc9b2f5c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 May 2023 12:39:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"documentationId\": \"64734ad4d0c94714fc9b2f5c\",\n    \"date\": \"2023.3.2\",\n    \"approved\": \"REJECTED\",\n    \"title\": \"Modern DB doc\",\n    \"content\": \"Huge content\",\n    \"task\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add task",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
